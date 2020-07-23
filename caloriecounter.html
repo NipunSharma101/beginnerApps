@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="caloriecounterstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class = "heading" >Calorie counter</h1>
+    <h4 class = "food-items"> Select food items</h4>
+    <button class = "roti, , food-items" id = "roti">Roti</button>
+    <h4> Cal. value: 100 kCal</h4>
+    <br>
+    <button class = "milk, food-items"  id = "milk"> Milk </button>
+    <h4> Cal. value: 200 kCal</h4>
+    <br>
+    <button class = "juice, food-items" id = "juice">Juice</button>
+    <h4> Cal. value: 50 kCal</h4>
+    <br>
+    <button class = "ghee, food-items"  id = "ghee">Ghee</button>
+    <h4> Cal. value: 300 kCal</h4>
+    
+    <h4 id="calDisplay"></h4>
+    <script>
+        const displayValueVariable = document.querySelector("#calDisplay");
+
+        const rotiBtn = document.querySelector("#roti");
+        rotiBtn.addEventListener("click", addRoti);
+ 
+        const milkBtn = document.querySelector("#milk");
+        milkBtn.addEventListener("click", addMilk);
+        
+        const juiceBtn = document.querySelector("#juice");
+        juiceBtn.addEventListener("click", addJuice);
+        
+        const gheeBtn = document.querySelector("#ghee");
+        gheeBtn.addEventListener("click", addGhee);
+
+        let totalCalories = 0;
+        let totalFoodItemsConsumed = 0;
+        
+        function addRoti() {
+            console.log("roti was added")
+            totalCalories = totalCalories + 100;
+            console.log(totalCalories);
+            // displayValueVariable.textContent = totalCalories;
+            totalFoodItemsConsumed = ++totalFoodItemsConsumed;
+            console.log(totalFoodItemsConsumed);
+            const displayFinal = `The total calorie intake for the day is ${totalCalories} kCal`
+            displayValueVariable.textContent = displayFinal;
+            // if (rotiBtn) 
+            //     console.log("roti was clicked");
+            
+            // else if (milkBtn) 
+            //     console.log("milk was clicked");
+            
+            // else if (juice) 
+            //      console.log("juice was clicked");
+             
+            // else if (ghee)
+            //      console.log("ghee was clicked");
+            
+        }
+        
+        function addMilk() {
+            console.log("milk was added")
+            totalCalories = totalCalories + 200;
+            console.log(totalCalories);
+            // displayValueVariable.textContent = totalCalories;
+            totalFoodItemsConsumed = ++totalFoodItemsConsumed;
+            const displayFinal = `The total calorie intake for the day is ${totalCalories} kCal`
+            displayValueVariable.textContent = displayFinal;
+        }
+        
+        function addJuice() {
+            console.log("juice was added");
+            totalCalories = totalCalories + 50;
+            console.log(totalCalories);
+            // displayValueVariable.textContent = totalCalories;
+            totalFoodItemsConsumed = ++totalFoodItemsConsumed;
+            const displayFinal = `The total calorie intake for the day is ${totalCalories} kCal`
+            displayValueVariable.textContent = displayFinal;
+        }
+        
+        function addGhee() {
+            console.log("ghee was added");
+            totalCalories = totalCalories + 300;
+            console.log(totalCalories);
+            // displayValueVariable.textContent = totalCalories;
+            totalFoodItemsConsumed = ++totalFoodItemsConsumed;
+            const displayFinal = `The total calorie intake for the day is ${totalCalories} kCal`
+            displayValueVariable.textContent = displayFinal;
+        }
+
+    // const displayValueVariable = document.querySelector("#calDisplay")
+    const displayFinal = `The total calorie intake for the day is ${totalCalories} kCal`
+    displayValueVariable.textContent = displayFinal;
+    </script>
+    
+</body>
+</html>
